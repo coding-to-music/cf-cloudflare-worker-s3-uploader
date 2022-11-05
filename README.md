@@ -1,3 +1,29 @@
+# cf-cloudflare-worker-s3-uploader
+
+# 🚀 Cloudflare Worker for uploading images to Amazon S3 🚀
+
+https://github.com/coding-to-music/cf-cloudflare-worker-s3-uploader
+
+From / By https://github.com/yusukebe/cf-s3-uploader
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/cf-cloudflare-worker-s3-uploader.git
+git push -u origin main
+```
+
 # cf-s3-uploader
 
 Cloudflare Worker for uploading images to Amazon S3.

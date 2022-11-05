@@ -1,10 +1,11 @@
 {
-  "name": "cf-s3-uploader",
+  "name": "cf-cloudflare-worker-s3-uploader",
   "version": "0.1.0",
   "description": "Cloudflare Worker for uploading images to Amazon S3",
   "main": "dist/worker.js",
   "scripts": {
     "build": "webpack",
+    "deploy": "git add . && git commit -m Build && git push",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "jest --config jestconfig.json --verbose"
