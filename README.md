@@ -8,8 +8,36 @@ From / By https://github.com/yusukebe/cf-s3-uploader
 
 ## Environment variables:
 
-```java
+wrangler.example.toml
 
+```java
+account_id = ""
+compatibility_date = "2021-11-01"
+name = "s3-uploader"
+route = ""
+type = "javascript"
+workers_dev = true
+zone_id = ""
+
+[site]
+bucket = "./public"
+entry-point = "./"
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
+
+[vars]
+S3_BUCKET = "your_bucket_name"
+S3_FOLDER = "folder-name/"
+S3_REGION = "s3_region_name"
+
+[secrets]
+# NAME
+# PASS
+# AWS_ID
+# AWS_SECRET
 ```
 
 ## GitHub
