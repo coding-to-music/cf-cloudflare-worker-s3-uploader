@@ -4,6 +4,8 @@
 
 https://github.com/coding-to-music/cf-cloudflare-worker-s3-uploader
 
+https://cf-cloudflare-worker-s3-uploader.coding-to-music.workers.dev
+
 From / By https://github.com/yusukebe/cf-s3-uploader
 
 ## Environment variables:
