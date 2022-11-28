@@ -65,7 +65,7 @@ $ https://github.com/yusukebe/cf-s3-uploader.git
 $ cd cf-s3-uploader
 ```
 
-Copy `wrangler.exmple.toml` to `wrangler.tmol`:
+Copy `wrangler.exmple.toml` to `wrangler.toml`:
 
 ```bash
 $ cp wrangler.example.toml wrangler.toml
@@ -203,3 +203,35 @@ curl <LOCALHOST_URL>
 ```
 
 ## Important - open port 8976
+
+## Run time errors
+
+```
+Total Upload: 141.01 KiB / gzip: 30.35 KiB
+Reading worker.js...
+Skipping - already uploaded.
+Reading worker.js.map...
+Skipping - already uploaded.
+↗️  Done syncing assets
+5:13:16 AM GET / 500
+✘ [ERROR] Uncaught (in promise) KVError: could not find index.html in your content namespace
+
+  throw new types_1.NotFoundError(`could not find ${pathKey} in your content namespace`);
+      at
+  (/mnt/volume_nyc1_01/cf-cloudflare-worker-s3-uploader/dist/webpack:/cf-cloudflare-worker-s3-uploader/node_modules/@cloudflare/kv-asset-handler/dist/index.js:247:0)
+      at fulfilled
+  (/mnt/volume_nyc1_01/cf-cloudflare-worker-s3-uploader/dist/webpack:/cf-cloudflare-worker-s3-uploader/node_modules/@cloudflare/kv-asset-handler/dist/index.js:5:0)
+
+
+✘ [ERROR] Uncaught (in response) Error: KVError: could not find index.html in your content namespace
+
+
+5:13:17 AM GET /favicon.ico 500
+✘ [ERROR] Uncaught (in promise) KVError: could not find favicon.ico in your content namespace
+
+  throw new types_1.NotFoundError(`could not find ${pathKey} in your content namespace`);
+      at
+  (/mnt/volume_nyc1_01/cf-cloudflare-worker-s3-uploader/dist/webpack:/cf-cloudflare-worker-s3-uploader/node_modules/@cloudflare/kv-asset-handler/dist/index.js:247:0)
+      at fulfilled
+  (/mnt/volume_nyc1_01/cf-cloudflare-worker-s3-uploader/dist/webpack:/cf-cloudflare-worker-s3-uploader/node_modules/@cloudflare/kv-asset-handler/dist/index.js:5:0)
+  ```
