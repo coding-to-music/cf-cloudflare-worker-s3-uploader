@@ -1,19 +1,14 @@
 account_id = ""
 compatibility_date = "2021-11-01"
-name = "s3-uploader"
-route = ""
-type = "javascript"
+name = "cf-cloudflare-worker-s3-uploader"
+main = "dist/worker.js"
 workers_dev = true
-zone_id = ""
 
 [site]
-bucket = "./public"
-entry-point = "./"
+bucket = "./dist"
 
 [build]
 command = "npm install && npm run build"
-[build.upload]
-format = "service-worker"
 
 [vars]
 S3_BUCKET = "your_bucket_name"
