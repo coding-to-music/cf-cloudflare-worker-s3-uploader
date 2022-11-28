@@ -1,5 +1,6 @@
 # cf-cloudflare-worker-s3-uploader
 
+Seems incomplete, does not work, missing index.html and favicon.ico
 # 🚀 Cloudflare Worker for uploading images to Amazon S3 🚀
 
 https://github.com/coding-to-music/cf-cloudflare-worker-s3-uploader
